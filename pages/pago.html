@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Amigo</title>
+    <link rel="stylesheet" href="../css/stilos.css">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="../pages/dueño.html">DUEÑO</a></li>
+            <li><a href="../index.html">INICIO</a></li>
+        </ul>
+    </header>
+
+    <h1>METODO DE PAGO</h1>
+
+    <h3>A continuacion usted seleccionara el metodo de pago que desea realizar, le sera emitido el precio final a abonar
+        en la caja a travez del metodo que usted selecciono</h3>
+    <div class="metopago">
+        <ul>
+            <li><input  type="radio" onclick="checked1()" name="eleccionpago" checked id="efectivo">EFECTIVO 0%</li>
+            <li><input type="radio" name="eleccionpago" id="debito">DEBITO 2%</li>
+            <li><input type="radio" name="eleccionpago" id="credito">CREDITO 10%</li>
+            <li><input type="radio" name="eleccionpago" id="cheque">CHEQUE 15%</li>
+            <li><input type="radio" name="eleccionpago" id="pagare">PAGARE 21%</li>
+        </ul>
+    </div>
+    <div class="generar" >
+        <input type="button" value="GENERAR BOLETA DE PAGO" class="generar1">
+    </div>
+
+    <div class="conjuntoform">
+        <div  class="divForm">
+            <form  class="form" id="formControlado" > 
+                <div class="primero">
+                    <input disabled id="cancelado" class="input" placeholder="Nombre" />
+                    <input disabled id="cancelado" class="input" placeholder="Apellido" />
+                </div>
+                <div class="segundo">
+                    <input disabled id="cancelado" class="input" placeholder="Teléfono" />
+                    <input disabled id="cancelado" class="input" placeholder="N° tarjeta de Credito" />
+                </div>
+                <div class="tercero">
+                    <input disabled id="cancelado" class="input" placeholder="Codigo de seguridad">
+                    <input disabled id="cancelado" class="input" placeholder="Fecha de vencimiento">
+                </div>
+            </form>
+            <div class="baceptar">
+                <button class="input" id="controlAccept">ACEPTAR</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../javascript/stilo.js"></script>
+</body>
+
+</html>
