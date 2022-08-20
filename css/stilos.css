@@ -5,34 +5,114 @@
 }
 
 
-header {
-    height: 80px;
-    width: 100%;
-    background-color: aqua;
-}
+/*-------------------------ELECCION----------------------*/
 
-header ul {
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #0693E3;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-header ul li {
-    margin: 30px;
-    display: block;
-}
-
-header ul li a {
+.header ul {
+    margin: 10px;
+    padding-right: 70px;
     list-style-type: none;
-    margin-right: 20px;
-    padding: 10px;
 }
+
+.header ul li {
+    display: inline-block;
+    padding: 30px;
+}
+
+.header ul li a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.header ul li a:hover {
+    color: #b3aeae;
+    transition: 0.5s;
+}
+
+.header ul li label {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    color: #000;
+
+}
+
+.hambu {
+    width: 20px;
+}
+
+.carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.carrito .movimiento_carrito {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    background-color: #fae1dd;
+    width: 30%;
+    margin-right: -30%;
+    z-index: 1000;
+}
+
+.carrito .movimiento_carrito h2 {
+    align-self: center;
+    text-align: center;
+}
+
+.carrito .movimiento_carrito .comprar {
+    width: 25%;
+    align-self: center;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #fff;
+    background-color: #000;
+    color: #fae1dd;
+}
+
+.carrito .movimiento_carrito .comprar:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    transition: 1s;
+}
+
+#btn_menu {
+    display: none;
+}
+
+#btn_menu:checked~.movimiento_carrito {
+    margin: 0;
+    transition: all 1.5s;
+}
+
+
+
+
 
 .h1principal {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin: 15px;
+    margin-top: 110px;
     padding-left: 5%;
 }
 
@@ -64,6 +144,7 @@ header ul li a {
     list-style-type: none;
     margin: 20px;
     padding: 10px;
+    display: none;
 }
 
 .ftortas .btn2 {
@@ -150,6 +231,7 @@ header ul li a {
     margin: 20px;
 }
 
+/*-------------------------PAGO----------------------*/
 
 .metopago {
     display: flex;
@@ -236,16 +318,138 @@ header ul li a {
     margin: 25px;
 }
 
-.baceptar #controlAccept {
+/*-------------------------------ingreso--------------------------------*/
+.contenedor {
+    width: 100%;
+}
+
+.inicio {
+    background-color: rgb(206, 206, 206);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_inicio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+
+}
+
+.usuario {
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
-    background-color: black;
-    color: beige;
-    border: 1px solid rgb(221, 4, 22);
-    cursor: pointer;
+    margin: 10px;
+    border: 1px solid #000;
+    box-shadow: 5px 2px 2px black;
+}
+
+.usuario #user {
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.usuario #userjefe {
+    padding: 10px;
+    margin: 20px;
+
+}
+
+.usuario #enviar {
+    margin: 10px;
+    padding: 10px;
+}
+
+.usuario #enviarjefe {
+    margin: 10px;
+    padding: 10px;
+}
+
+.strong {
+    color: transparent;
+    font-weight: bolder;
+}
+
+.bienvenida_jefe {
+    position: absolute;
+    top: 45%;
+}
+
+
+
+/*-----------------------DUEÑO------------------------*/
+
+.welcomeowner {
+    margin: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+}
+
+.h2cajas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.cajasdia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.lblcajas {
+    padding: 20px;
+}
+
+#Consulta1 {
+    margin: 20px;
+    padding: 10px;
+}
+
+
+.h2consultacajas {
+    width: 580px;
+    margin: auto;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cajamenores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#Nmenor {
+    text-align: center;
+    padding: 10px;
     margin: 10px;
 }
 
-.baceptar #controlAccept:hover {
-    opacity: 0.8;
-    transition: 1s;
+#Consulta2 {
+    padding: 10px;
+    margin: 10px;
+}
+
+.bodydueño {
+    background-color: rgb(206, 206, 206);
 }

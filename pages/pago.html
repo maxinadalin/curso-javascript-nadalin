@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <ul>
-            <li><a href="../pages/dueño.html">DUEÑO</a></li>
-            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="./ingresodueño.html">DUEÑO</a></li>
+            <li><a href="./index.html">INICIO</a></li>
         </ul>
     </header>
 
@@ -23,35 +23,33 @@
         en la caja a travez del metodo que usted selecciono</h3>
     <div class="metopago">
         <ul>
-            <li><input  type="radio" onclick="checked1()" name="eleccionpago" checked id="efectivo">EFECTIVO 0%</li>
+            <li><input  type="radio"  name="eleccionpago" checked id="efectivo">EFECTIVO 0%</li>
             <li><input type="radio" name="eleccionpago" id="debito">DEBITO 2%</li>
             <li><input type="radio" name="eleccionpago" id="credito">CREDITO 10%</li>
             <li><input type="radio" name="eleccionpago" id="cheque">CHEQUE 15%</li>
             <li><input type="radio" name="eleccionpago" id="pagare">PAGARE 21%</li>
         </ul>
     </div>
-    <div class="generar" >
-        <input type="button" value="GENERAR BOLETA DE PAGO" class="generar1">
-    </div>
+  
 
     <div class="conjuntoform">
         <div  class="divForm">
             <form  class="form" id="formControlado" > 
                 <div class="primero">
-                    <input disabled id="cancelado" class="input" placeholder="Nombre" />
-                    <input disabled id="cancelado" class="input" placeholder="Apellido" />
+                    <input disabled id="nom" class="input" placeholder="Nombre" />
+                    <input  id="cancelado" class="input" placeholder="Apellido" />
                 </div>
                 <div class="segundo">
-                    <input disabled id="cancelado" class="input" placeholder="Teléfono" />
-                    <input disabled id="cancelado" class="input" placeholder="N° tarjeta de Credito" />
+                    <input  id="cancelado" class="input" placeholder="Teléfono" />
+                    <input  id="cancelado" class="input" placeholder="N° tarjeta de Credito" />
                 </div>
                 <div class="tercero">
-                    <input disabled id="cancelado" class="input" placeholder="Codigo de seguridad">
-                    <input disabled id="cancelado" class="input" placeholder="Fecha de vencimiento">
+                    <input  id="cancelado" class="input" placeholder="Codigo de seguridad">
+                    <input  id="cancelado" class="input" placeholder="Fecha de vencimiento">
                 </div>
             </form>
-            <div class="baceptar">
-                <button class="input" id="controlAccept">ACEPTAR</button>
+            <div class="generar" >
+                <input type="button" value="GENERAR BOLETA DE PAGO" class="generar1">
             </div>
         </div>
     </div>

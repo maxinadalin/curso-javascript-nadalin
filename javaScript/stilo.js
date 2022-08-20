@@ -185,18 +185,17 @@ function ir() {
         location.href = "pages/pago.html"
     }
 }
-
+//------------------------PAGO--------------------------------//
 
 
 
 function checked1(){
    if (document.querySelector("#efectivo").checked == true) {
-   document.querySelectorAll("#cancelado").disabled = false;
+   document.querySelector("#nom").disabled = true;
    } else
    {
-    document.querySelectorall("#cancelado").disabled = true;
+    document.querySelectorall("#cancelado").disabled = false;
    }
-  
 }
 
 
@@ -234,6 +233,73 @@ function metododepago(metodopago) { //realizamos el metodo de pago por el cual u
     }
 }
 
+
+/*---------------------------------------------------------------*/
+//----------------------------inicio------------------------------
+
+let usuario = "admin"
+let password = "admin"
+
+let ingresar = document.querySelector("#enviar")
+ingresar.addEventListener("click",inicio);
+
+
+function inicio(){
+if (document.querySelector(".nombreuser").value !== usuario) {
+    document.querySelector(".strong").style.color ="red"
+}
+else if (document.querySelector(".passuser").value !== password) {
+    document.querySelector(".strong").style.color = "red"
+}
+else{
+    location.href = "./pages/index.html"
+}
+
+}
+
+//---------------------------------DUEÑO---------------------//
+
+ 
+   
+
+
+
+function todas(){
+const cajas = ventacajas.slice();
+ let cajass = cajas.join(" \n- ")
+document.querySelector("#lblcajas").value = "El numero de ventas realizadas por cajas de hoy fueron:\n- " + cajass
+document.querySelector("#lblcajas").style.fontSize = "20px"
+}
+let consultar1 = document.querySelector("#Consulta1")
+consultar1.addEventListener("click",todas);
+consultar1.addEventListener("enter",todas);
+
+
+let consultar2 = document.querySelector("#Consulta2")
+consultar2.addEventListener("click",cons2)
+consultar2.addEventListener("enter",cons2)
+
+function cons2(){
+    let final = document.querySelector("#Nmenor").value
+function cons3(final){
+    f = 0
+          let resultado = new Array();
+          
+          for (let i = 0; i < ventacajas.length; i++) {
+              if (ventacajas[f]< final) {
+                  resultado[i] = ventacajas[f];
+              }  
+              f = f + 1
+          }
+      
+          return resultado;
+         
+}
+let numeros = cons3(final);
+let numeross =  numeros.join(" \n- ")
+document.querySelector("#MNmenor").value ="Las cajas que vendieron por un valor menor a " + final+ " son: \n- " + numeross
+document.querySelector("#MNmenor").style.fontSize = "20px"
+}
 
 
 /*

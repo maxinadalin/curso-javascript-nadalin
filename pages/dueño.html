@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="../css/stilos.css">
     <title>El Amigo</title>
 </head>
-<body>
-    <header>
+<body class="bodydueño">
+    <header class="header">
         <ul>
-            <li><a href="../pages/dueño.html">DUEÑO</a></li>
-            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="./ingresodueño.html">DUEÑO</a></li>
+            <li><a href="./index.html">INICIO</a></li>
         </ul>
     </header>
 
-    <h1>BIENVENIDO SEÑOR, REGISTRESE PARA PODER INGRESAR</h1>
+    <h1 class="welcomeowner">BIENVENIDO SEÑOR/RA</h1>
 
     <!-- <form class="form">
 
@@ -27,15 +27,25 @@
         <input type="submit" class="enviar">
     </form>-->
 
-<h2>NUMERO DE VENTAS REALIZADAS EL DIA DE HOY</h2>
-<input type="button" value="CONSULTAR">
+<div class="h2cajas">
+<h2 > CONSULTAR NÚMERO DE VENTAS REALIZADAS EL DÍA DE HOY</h2>
+</div>
 
 
+<div class="cajasdia">
+<textarea name="" id="lblcajas" cols="50" rows="8" class="lblcajas"></textarea>
+<input type="button" value="CONSULTAR" id="Consulta1">
+</div>
+
+<div class="h2consultacajas">
 <h2>DEBE COLOCAR UN NUMERO CON EL FIN DE SOLICITARLE AL PROGRAMA LAS CAJAS QUE POSEAN UN CIERRE DE CAJA MENOR AL NUMERO SOLICITADO</h2>
+</div>
 
-<input type="text" placeholder="Ingrese un Numero">
-<input type="button" value="CONSULTAR">
-
+<div class="cajamenores">
+<input type="text" placeholder="Ingrese un Numero" id="Nmenor">
+<textarea name="" id="MNmenor" cols="50" rows="8"></textarea>
+<input type="button" value="CONSULTAR" id="Consulta2">
+</div>
 
     <script src="../javascript/stilo.js"></script>
 </body>
