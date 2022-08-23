@@ -11,7 +11,8 @@ let te = parseInt(150)
 let licuado = parseInt(250)
 let agua = parseInt(130)
 let gaseosa = parseInt(180)
-let ventacajas = [400, 600, 1300, 1600, 1800, 2300]
+let ventacajas = [400, 600, 1300, 1600, 1800, 2300] 
+export{ventacajas};
 let sumatotal = parseInt()
 let b = 0
 let i = 0
@@ -25,9 +26,7 @@ let minmax = []
 let totalgeneralgaseosa = parseInt() // variable que va a contenter la operacion que se realice dependiendo la opcion que elija el usuario
 let totalgeneral = parseInt() // variable que va a contenter la operacion que se realice dependiendo la opcion que elija el usuario
 let data = ""
-let data2 = "";
-let paginas = 0
-let nombre = ""
+
 
 const tortas = [Chocotorta, Tiramisú, Selva, Lemon, coco] // array que contiene las tortas
 const liquidos = [cafegrande, cafechico, submarino, cortado, te, licuado, agua, gaseosa] // array que contiene las bebidas
@@ -55,6 +54,7 @@ const tira = (Tiramisú, cantidad1) => (Tiramisú * cantidad1)
 const selv = (Selva, cantidad1) => (Selva * cantidad1)
 const lem = (Lemon, cantidad1) => (Lemon * cantidad1)
 const coc = (coco, cantidad1) => (coco * cantidad1)
+
 
 
 
@@ -95,18 +95,6 @@ function algo() {
     }
 
 }
-
-function capturar() {
-    cantidad1 = document.getElementById("cantidad").value
-    document.querySelector("#mostrar").value = "Ustéd ha seleccionado " + data + "\n\n-Precio por unidad:" + " " + tortas[i] + " " + "pesos\n\n-Cantidad:" + " " + cantidad1 + " " + "unidades\n\n-Total a Pagar: $" + tortas[i] * cantidad1 + " " + "pesos"
-    document.querySelector("#mostrar").style.fontSize = "30px"
-    document.querySelector("#mostrar").style.textAlign = "center"
-
-}
-
-
-
-
 
 const Cafegrande = (cafegrande, cantidad2) => (cafegrande * cantidad2) // desarrollo esta operacion para que la misma despues pueda ser llamada dentro de uuna funcion y asi poder guardarla dentro de una variable para poder ser llamada mas tarde cuando se necesite 
 const Cafechico = (cafechico, cantidad2) => (cafechico * cantidad2)
@@ -166,14 +154,6 @@ function gass() {
 
 }
 
-function capturar2() {
-    cantidad2 = document.getElementById("cantidad2").value
-    document.querySelector("#mostrar2").value = "Ustéd ha seleccionado " + data2 + "\n\n-Precio por unidad:" + " " + liquidos[b] + " " + "pesos\n\n-Cantidad:" + " " + cantidad2 + " " + "unidades\n\n-Total a Pagar: $" + liquidos[b] * cantidad2 + " " + "pesos"
-    document.querySelector("#mostrar2").style.fontSize = "30px"
-    document.querySelector("#mostrar2").style.textAlign = "center"
-
-}
-
 
 function ir() {
     let data3 = "";
@@ -185,6 +165,9 @@ function ir() {
         location.href = "pages/pago.html"
     }
 }
+
+
+
 //------------------------PAGO--------------------------------//
 
 
@@ -235,71 +218,6 @@ function metododepago(metodopago) { //realizamos el metodo de pago por el cual u
 
 
 /*---------------------------------------------------------------*/
-//----------------------------inicio------------------------------
-
-let usuario = "admin"
-let password = "admin"
-
-let ingresar = document.querySelector("#enviar")
-ingresar.addEventListener("click",inicio);
-
-
-function inicio(){
-if (document.querySelector(".nombreuser").value !== usuario) {
-    document.querySelector(".strong").style.color ="red"
-}
-else if (document.querySelector(".passuser").value !== password) {
-    document.querySelector(".strong").style.color = "red"
-}
-else{
-    location.href = "./pages/index.html"
-}
-
-}
-
-//---------------------------------DUEÑO---------------------//
-
- 
-   
-
-
-
-function todas(){
-const cajas = ventacajas.slice();
- let cajass = cajas.join(" \n- ")
-document.querySelector("#lblcajas").value = "El numero de ventas realizadas por cajas de hoy fueron:\n- " + cajass
-document.querySelector("#lblcajas").style.fontSize = "20px"
-}
-let consultar1 = document.querySelector("#Consulta1")
-consultar1.addEventListener("click",todas);
-consultar1.addEventListener("enter",todas);
-
-
-let consultar2 = document.querySelector("#Consulta2")
-consultar2.addEventListener("click",cons2)
-consultar2.addEventListener("enter",cons2)
-
-function cons2(){
-    let final = document.querySelector("#Nmenor").value
-function cons3(final){
-    f = 0
-          let resultado = new Array();
-          
-          for (let i = 0; i < ventacajas.length; i++) {
-              if (ventacajas[f]< final) {
-                  resultado[i] = ventacajas[f];
-              }  
-              f = f + 1
-          }
-      
-          return resultado;
-         
-}
-let numeros = cons3(final);
-let numeross =  numeros.join(" \n- ")
-document.querySelector("#MNmenor").value ="Las cajas que vendieron por un valor menor a " + final+ " son: \n- " + numeross
-document.querySelector("#MNmenor").style.fontSize = "20px"
-}
 
 
 /*
@@ -319,3 +237,9 @@ elementoPadre.append(cambio);*/
 let cambiar = document.querySelector(".seltorta");
 cambiar.innerText = "SELECCIONE UNA DE NUESTRAS EXQUISITAS TORTAS! GRACIAS ";
 */
+
+
+//---------------------------------DUEÑO---------------------//
+
+
+    

@@ -6,107 +6,9 @@
 
 
 /*-------------------------ELECCION----------------------*/
-
-.header {
-    width: 100%;
-    height: 100px;
-    background-color: #0693E3;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
+body{
+    background-color: rgb(206, 206, 206);
 }
-
-.header ul {
-    margin: 10px;
-    padding-right: 70px;
-    list-style-type: none;
-}
-
-.header ul li {
-    display: inline-block;
-    padding: 30px;
-}
-
-.header ul li a {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000;
-}
-
-.header ul li a:hover {
-    color: #b3aeae;
-    transition: 0.5s;
-}
-
-.header ul li label {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer;
-    color: #000;
-
-}
-
-.hambu {
-    width: 20px;
-}
-
-.carrito {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.carrito .movimiento_carrito {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100px;
-    background-color: #fae1dd;
-    width: 30%;
-    margin-right: -30%;
-    z-index: 1000;
-}
-
-.carrito .movimiento_carrito h2 {
-    align-self: center;
-    text-align: center;
-}
-
-.carrito .movimiento_carrito .comprar {
-    width: 25%;
-    align-self: center;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #fff;
-    background-color: #000;
-    color: #fae1dd;
-}
-
-.carrito .movimiento_carrito .comprar:hover {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #000;
-    transition: 1s;
-}
-
-#btn_menu {
-    display: none;
-}
-
-#btn_menu:checked~.movimiento_carrito {
-    margin: 0;
-    transition: all 1.5s;
-}
-
-
-
-
 
 .h1principal {
     display: flex;
@@ -201,34 +103,32 @@
     padding: 20px;
 }
 
-.ir {
+.cartas {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+}
+.card{
+  width: 100%;
 }
 
-.ir li {
-    list-style-type: none;
-}
-
-.btn33 {
+.btn_tortas{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.btn3 {
     margin: 20px;
+}
+#sigtortas{
     padding: 10px;
+    margin-bottom: 20px;
 }
-
-#mostrar {
+.btn_bebidas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 20px;
-
 }
-
-#mostrar2 {
-    margin: 20px;
+#sigbebidas{
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 /*-------------------------PAGO----------------------*/
@@ -265,7 +165,7 @@
     padding: 10px;
     background-color: black;
     color: beige;
-    border: 1px solid rgb(221, 4, 22);
+    border: 1px solid rgb(3, 148, 252);
     cursor: pointer;
     margin: 10px;
 }
@@ -452,4 +352,184 @@
 
 .bodydueño {
     background-color: rgb(206, 206, 206);
+}
+
+
+/*--------------------------------TORTAS Y BEBIDAS----------------------------*/
+
+header{
+    background-color: rgb(10, 196, 196);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    box-shadow: 0 7px 8px -3px grey;
+    position: fixed;
+    width: 100%;
+    margin-top: -10px;
+    z-index: 99;
+}
+.container{
+    max-width: 1200px;
+    text-align: center;
+    margin: auto;
+}
+.header-section{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+    position: relative;
+}
+.header-section div{
+    position: relative;
+}
+.header-section p{
+    position: absolute;
+    top: -24px;
+    right: -8px;
+    background-color: #fff;
+    padding: 1px 6px;
+    border-radius: 50%;
+    color: rgb(3, 148, 252);;
+    font-weight: 700;
+    font-family: system-ui;
+    line-height: 18px;
+}
+.logo{
+    width: 164px;
+    height: 84px;
+    cursor: pointer;
+}
+
+.cart{
+    width: 39px;
+    height: 38px;
+}
+.cart-products{
+    position: absolute!important;
+    top: 82px;
+    right: -18px;
+    background-color: #fff;
+    padding: 0 18px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    display: none;
+
+    min-width: 290px;
+}
+
+.cart:hover{
+    margin-bottom: 16px;
+    transition-duration: .5s;
+}
+/*end header*/
+.products{
+    padding-top: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carts{
+    max-width: 250px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+    padding-bottom: 34px;
+    margin-bottom: 40px;
+}
+.carts img{
+    width: 100%;
+}
+.carts p{
+    font-family: system-ui;
+    font-weight: 500;
+    padding: 0 20px;
+    margin-bottom: 24px;
+}
+.carts div p{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background-color: rgb(3, 148, 252);
+    color: #fff;
+    padding: 2px 7px 4px 21px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+.carts div{
+    position: relative;
+}
+.carts a{
+    font-family: system-ui;
+    text-decoration: none;
+    background: rgb(3, 148, 252);
+    padding: 9px 23px;
+    color: #fff;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.carts a:hover{
+    background: #fff;
+    color: rgb(10, 196, 196);
+    border: solid 2px rgb(10, 196, 196);
+    transition-duration: .3s;
+}
+
+/*float cart*/
+.cart-products .item img{
+    width: 115px;
+}
+
+.cart-products .item{
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px rgb(3, 148, 252);
+}
+.cart-products .item .item-content{
+    margin: 0 19px;
+    width: 201px;
+}
+.cart-products .item .item-content h5{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.cart-products .item .item-content h6{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: system-ui;
+}
+.cart-products .item span{
+    background-color: rgb(3, 148, 252);
+    padding: 0px 5px;
+    border-radius: 50%;
+    color: #fff;
+    font-family: system-ui;
+    cursor: pointer;
+}
+.cart-products h3{
+    margin-bottom: 0;
+}
+.cart-products .item .item-content h5.cart-price{
+    font-weight: 700;
+}
+
+/*stye to btn close*/
+p.close-btn{
+    top: -4px;
+    right: 6px;
+    cursor: pointer;
+    color: #000;
+}
+p.author {
+    display: flex;
+    justify-content: center;
+    FONT-VARIANT: JIS04;
+    margin-top: 3%;
+    gap: 7px;
+}
+p.author a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
 }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Amigo</title>
+    <link rel="stylesheet" href="../css/stilos.css">
+    
+</head>
+<body>
+    <header>
+        <div class="header-section container">
+            <img class="logo" src="./images/logoShop.png" alt="">
+            <ul>
+                <li><a href="./ingresodueño.html">DUEÑO</a></li>
+                <li><a href="./tortas.html">INICIO</a></li>
+            </ul>
+            <div>
+                <img onmouseover="showCart(this)" class="cart" src="../image/hamburguesa .png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="cart-items">
+                </div>
+                <h2>Total: <strong class="price-total">0</strong> $</h2>
+            </div>
+        </div>
+    </header>
+    <section class="container">
+        <div class="products">
+            <div class="carts">
+                <div>
+                    <img src="../image/cafegrande.jpg" alt="">
+                    <p><span>150</span>$</p>
+                </div>
+                <p class="title"> cafe grande-----------</p>
+                <a href="" data-id="6" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/cafechico.jpg" alt="">
+                    <p><span>100</span>$</p>
+                </div>
+                <p class="title"> cafe chico -----------</p>
+                <a href="" data-id="7" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/submarino.jpg" alt="">
+                    <p><span>250</span>$</p>
+                </div>
+                <p class="title"> submarino-----------</p>
+                <a href="" data-id="8" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/cortado.jpg" alt="">
+                    <p><span>200</span>$</p>
+                </div>
+                <p class="title"> cortado-----------</p>
+                <a href="" data-id="9" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/te.jpg" alt="">
+                    <p><span>160</span>$</p>
+                </div>
+                <p class="title"> te-----------------160</p>
+                <a href="" data-id="10" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/agua.jpg" alt="">
+                    <p><span>170</span>$</p>
+                </div>
+                <p class="title"> agua-----------</p>
+                <a href="" data-id="11" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/gaseosa.jpg" alt="">
+                    <p><span>180</span>$</p>
+                </div>
+                <p class="title"> gaseosa-----------</p>
+                <a href="" data-id="11" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/te.jpg" alt="">
+                    <p><span>160</span>$</p>
+                </div>
+                <p class="title"> te-----------------160</p>
+                <a href="" data-id="10" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/te.jpg" alt="">
+                    <p><span>160</span>$</p>
+                </div>
+                <p class="title"> te-----------------160</p>
+                <a href="" data-id="10" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/te.jpg" alt="">
+                    <p><span>160</span>$</p>
+                </div>
+                <p class="title"> te-----------------160</p>
+                <a href="" data-id="10" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/te.jpg" alt="">
+                    <p><span>160</span>$</p>
+                </div>
+                <p class="title"> te-----------------160</p>
+                <a href="" data-id="10" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/te.jpg" alt="">
+                    <p><span>160</span>$</p>
+                </div>
+                <p class="title"> te-----------------160</p>
+                <a href="" data-id="10" class="btn-add-cart">Agregar Al Carrito</a>
+            </div>
+        </div>
+    </section>
+    <div class="btn_bebidas">
+        <input type="button" value="PROCEDER AL PAGO" id="sigbebidas">
+    </div>
+
+
+    <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("products-id").style.display = "none";
+        }
+
+    </script>
+    <script src="../src/container/Bebidas.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+export const Nmenor = document.querySelector("#Nmenor").value

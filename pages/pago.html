@@ -1,61 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Amigo</title>
     <link rel="stylesheet" href="../css/stilos.css">
+    
 </head>
-
 <body>
     <header class="header">
-        <ul>
-            <li><a href="./ingresodueño.html">DUEÑO</a></li>
-            <li><a href="./index.html">INICIO</a></li>
-        </ul>
-    </header>
-
-    <h1>METODO DE PAGO</h1>
-
-    <h3>A continuacion usted seleccionara el metodo de pago que desea realizar, le sera emitido el precio final a abonar
-        en la caja a travez del metodo que usted selecciono</h3>
-    <div class="metopago">
-        <ul>
-            <li><input  type="radio"  name="eleccionpago" checked id="efectivo">EFECTIVO 0%</li>
-            <li><input type="radio" name="eleccionpago" id="debito">DEBITO 2%</li>
-            <li><input type="radio" name="eleccionpago" id="credito">CREDITO 10%</li>
-            <li><input type="radio" name="eleccionpago" id="cheque">CHEQUE 15%</li>
-            <li><input type="radio" name="eleccionpago" id="pagare">PAGARE 21%</li>
-        </ul>
-    </div>
-  
-
-    <div class="conjuntoform">
-        <div  class="divForm">
-            <form  class="form" id="formControlado" > 
-                <div class="primero">
-                    <input disabled id="nom" class="input" placeholder="Nombre" />
-                    <input  id="cancelado" class="input" placeholder="Apellido" />
+        <div class="header-section container">
+            <img class="logo" src="./images/logoShop.png" alt="">
+            <ul>
+                <li><a href="./ingresodueño.html">DUEÑO</a></li>
+                <li><a href="./tortas.html">INICIO</a></li>
+            </ul>
+            <div>
+                <img onmouseover="showCart(this)" class="cart" src="../image/hamburguesa .png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="card-items">
                 </div>
-                <div class="segundo">
-                    <input  id="cancelado" class="input" placeholder="Teléfono" />
-                    <input  id="cancelado" class="input" placeholder="N° tarjeta de Credito" />
-                </div>
-                <div class="tercero">
-                    <input  id="cancelado" class="input" placeholder="Codigo de seguridad">
-                    <input  id="cancelado" class="input" placeholder="Fecha de vencimiento">
-                </div>
-            </form>
-            <div class="generar" >
-                <input type="button" value="GENERAR BOLETA DE PAGO" class="generar1">
+                <h2>Total: <strong class="price-total">0</strong> $</h2>
             </div>
         </div>
-    </div>
+    </header>
+    <section class="container">
+        <div class="products">
+            <div class="carts">
+                <div>
+                    <img src="../image/efectivo.jpg" alt="">
+                   
+                </div>
+                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+                <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/debito.jpg" alt="">
+                    
+                </div>
+                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+                <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/credito.jpg" alt="">
+                    
+                </div>
+                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+                <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="../image/cheque.jpg" alt="">
+                
+                </div>
+                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+                <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+            </div>
+            
+            <div class="carts">
+                <div>
+                    <img src="../image/pagare.jpg" alt="">
+                    
+                </div>
+                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
+                <a href="" data-id="5" class="btn-add-cart">add to cart</a>
+            </div>
+        </div>
+    </section>
+    <div class="btn_tortas">
+    <input type="button" value="SIGUIENTE" id="sigtortas">
+</div>
+    <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("products-id").style.display = "none";
+        }
 
-
-    <script src="../javascript/stilo.js"></script>
+    </script>
+    <script src="../javaScript/tortasybebidas.js" ></script>
 </body>
-
 </html>
