@@ -1,4 +1,4 @@
-import { obtenerProductosSessionStorage } from "../../lib/storage.js";
+import { obtenerProductosLocalStorage } from "../../lib/storage.js";
 
 export const containerBuyCart = document.querySelector('.cart-items')
 export const priceTotal = document.querySelector('.price-total')
@@ -9,7 +9,7 @@ let countProduct = 0;
 
 export function leerSessionStorage() {
     let productosLS;
-    productosLS = obtenerProductosSessionStorage();
+    productosLS = obtenerProductosLocalStorage();
     productosLS.forEach(product => {
         const {
             image,

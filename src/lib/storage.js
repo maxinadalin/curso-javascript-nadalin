@@ -1,12 +1,16 @@
 //Comprobar que hay elementos en el LS
-export function obtenerProductosSessionStorage() {
+export function obtenerProductosLocalStorage() {
     let productoLS;
+  
 
     //Comprobar si hay algo en LS
-    if (sessionStorage.getItem('compratortas') === null) {
+    if (localStorage.getItem('compratortas') === null) {
         productoLS = [];
+       
     } else {
-        productoLS = JSON.parse(sessionStorage.getItem('compratortas'));
+        productoLS = JSON.parse(localStorage.getItem('compratortas'));
+       
     }
     return productoLS;
+   
 }

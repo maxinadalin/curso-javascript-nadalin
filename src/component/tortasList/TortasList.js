@@ -1,5 +1,7 @@
+import { listaTortas } from "../../data/tortas.js";
 import { containerBuyCart, priceTotal, amountProduct } from "../cart/Cart.js";
-import { obtenerProductosSessionStorage } from "../../lib/storage.js";
+import { obtenerProductosLocalStorage } from "../../lib/storage.js";
+let f = 0;
 
 export const allTortasContainer = document.querySelector('.products');
 let totalCard = 0
@@ -11,8 +13,11 @@ export function addProduct(e) {
     if (e.target.classList.contains('btn-add-cart')) {
         const selectProduct = e.target.parentElement;
         readTheContent(selectProduct);
-        obtenerProductosSessionStorage();
-        sessionStorage.setItem('compratortas', JSON.stringify(buyThings))
+        obtenerProductosLocalStorage();
+        localStorage.setItem('compratortas', JSON.stringify(buyThings))
+        localStorage.setItem('totalcarrito', JSON.stringify(countProduct))
+        localStorage.setItem('totalpagartortas', JSON.stringify(totalCard))
+        
     }
 }
 
@@ -23,15 +28,21 @@ export function deleteProduct(e) {
         buyThings.forEach(value => {
             if (value.id == deleteId) {
                 let priceReduce = parseFloat(value.price) * parseFloat(value.amount);
+                localStorage.getItem("totalpagartortas",(JSON.parse(totalCard)))
                 totalCard = totalCard - priceReduce;
                 totalCard = totalCard.toFixed(2);
-                sessionStorage.removeItem('compratortas', buyThings[deleteId]);
+                localStorage.setItem("totalpagartortas",(JSON.stringify(totalCard)))
+                localStorage.removeItem('compratortas', buyThings[deleteId]);
+             //   sessionStorage.setItem('totalcarrito', JSON.stringify(deleteId))
+                
             }
         });
         buyThings = buyThings.filter(product => product.id !== deleteId);
-        sessionStorage.setItem('compratortas', JSON.stringify(buyThings))
-
+        localStorage.setItem('compratortas', JSON.stringify(buyThings))
+        
+        localStorage.getItem("totalcarrito",(JSON.parse(countProduct)))
         countProduct--;
+        localStorage.setItem("totalcarrito",(JSON.stringify(countProduct)))
     }
     //FIX: El contador se quedaba con "1" aunque ubiera 0 productos
     if (buyThings.length === 0) {
@@ -99,6 +110,8 @@ export function loadHtml() {
         priceTotal.innerHTML = totalCard;
 
         amountProduct.innerHTML = countProduct;
+
+        
     });
 }
 
