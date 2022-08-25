@@ -1,0 +1,1 @@
+export const MNmenor = document.querySelector("#MNmenor").value
