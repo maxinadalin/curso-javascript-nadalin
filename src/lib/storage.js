@@ -14,3 +14,11 @@ export function obtenerProductosLocalStorage() {
     return productoLS;
    
 }
+
+
+
+
+
+
+
+

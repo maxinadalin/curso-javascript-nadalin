@@ -1,14 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 
-    <h2>que onda</h2>
-    
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/stilos.css">
+
+  <title>Document</title>
+</head>
+
+<body onload="obtenerPrecioTarjetaLocalStorage()">
+
+
+
+  <h1>Metodo de pago</h1>
+
+  <div class="contentForm">
+    <form class="row g-3">
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" name="raio" type="radio" value="" id="credito" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Tarjeta de Credito.
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" name="raio" type="radio" value="" id="debito" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Tarjeta de Debito.
+          </label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationDefault01" class="form-label">NOMBRE</label>
+        <input type="text" class="form-control" id="validationDefault01" value="" required>
+      </div>
+      <div class="col-md-4">
+        <label for="validationDefault02" class="form-label">APELLIDO</label>
+        <input type="text" class="form-control" id="validationDefault02" value="" required>
+      </div>
+      <div class="col-md-4">
+        <label for="validationDefaultUsername" class="form-label">E-MAIL</label>
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+          <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2"
+            required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="validationDefault03" class="form-label">N° DE SU TARJETA</label>
+        <input type="text" class="form-control" id="validationDefault03" required>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault05" class="form-label">FECHA DE VENCIMIENTO</label>
+        <input type="text" class="form-control" id="validationDefault05" required>
+      </div>
+      <div class="col-md-3">
+        <label for="validationDefault05" class="form-label">COD. DE SEGURIDAD</label>
+        <input type="text" class="form-control" id="validationDefault05" required>
+      </div>
+      <div class="col-md-4">
+        <label for="validationDefault05" class="form-label">MONTO A ABONAR CON UN 25% DE RECARGO</label>
+        <input type="text" class="form-control" id="validationDefaultMonto" required>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+            Acepto los terminos y condiciones.
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit" id="Paga" >PAGAR</button>
+      </div>
+    </form>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+  </script>
+
+  <script src="../src/container/Pago.js"></script>
 </body>
+
 </html>

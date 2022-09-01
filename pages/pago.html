@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
     <title>El Amigo</title>
     <link rel="stylesheet" href="../css/stilos.css">
     
 </head>
-<body>
+<body onload="obtenerPreciosLocalStorage()">
     <header class="header">
         <div class="header-section container">
             <img class="logo" src="./images/logoShop.png" alt="">
@@ -32,51 +41,50 @@
     </header>
     <section class="container">
         <div class="products">
-            <div class="carts">
-                <div>
-                    <img src="../image/efectivo.jpg" alt="">
-                   
+            <div class="card" style="width: 18rem;">
+                <img src="../image/efectivo.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">EFECTIVO</h5>
+                  
+                  <a href="#" class="PagaE" >PAGAR</a>
                 </div>
-                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
-                <a href="" data-id="5" class="PagarCaja">PAGAR</a>
-            </div>
-            <div class="carts">
-                <div>
-                    <img src="../image/debito.jpg" alt="">
-                    
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../image/credito.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CCREDITO</h5>
+                 
+                  <a href="./PagoTarjetas.html" class="PagaT" id="Credito" >PAGAR</a>
                 </div>
-                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
-                <a href="./PagoTarjetas.html" data-id="5" class="PagarTarjeta">PAGAR</a>
-            </div>
-            <div class="carts">
-                <div>
-                    <img src="../image/credito.jpg" alt="">
-                    
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../image/debito.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">DEBITO</h5>
+                  
+                  <a href="./PagoTarjetas.html" class="PagaT" id="Debito" >PAGAR</a>
                 </div>
-                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
-                <a href="./PagoTarjetas.html" data-id="5" class="PagarTarjeta">PAGAR</a>
-            </div>
-            <div class="carts">
-                <div>
-                    <img src="../image/cheque.jpg" alt="">
-                
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../image/cheque.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">CHEQUE</h5>
+                  
+                  <a href="#" class="PagaC" >PAGAR</a>
                 </div>
-                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
-                <a href="" data-id="5" class="PagarCaja">PAGAR</a>
-            </div>
-            
-            <div class="carts">
-                <div>
-                    <img src="../image/pagare.jpg" alt="">
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="../image/pagare.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">PAGARE</h5>
+                 
+                  <a href="#" class="PagaP" >PAGAR</a>
                 </div>
-                <p class="title"> Trust GXT 856 Torac Teclado Metálico Gaming RGB</p>
-                <a href="" data-id="5" class="PagarCaja">PAGAR</a>
-            </div>
+              </div>
         </div>
     </section>
-    <div class="btn_tortas">
-    <input type="button" value="SIGUIENTE" id="sigtortas">
-</div>
+
+
     <script>
         function showCart(x){
             document.getElementById("products-id").style.display = "block";
@@ -86,6 +94,14 @@
         }
 
     </script>
-    <script src="../src/container/Pago.js" ></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+</script>
+
+
+    <script src="../src/container/sweetalert.js"   ></script>
 </body>
 </html>

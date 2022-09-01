@@ -1,12 +1,16 @@
-import { listaTortas } from "../../data/tortas.js";
+
 import { containerBuyCart, priceTotal, amountProduct } from "../cart/Cart.js";
 import { obtenerProductosLocalStorage } from "../../lib/storage.js";
 let f = 0;
 
 export const allTortasContainer = document.querySelector('.products');
+
 let totalCard = 0
 let countProduct = 0
 let buyThings = []
+
+
+
 
 export function addProduct(e) {
     e.preventDefault();
