@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/elamigo.jpg">
+
     <title>El Amigo</title>
     <link rel="stylesheet" href="../css/stilos.css">
-    
+
 </head>
+
 <body>
     <header class="header">
         <div class="header-section container">
-            <img class="logo" src="./images/logoShop.png" alt="">
+            <img class="logo" src="../image/elamigo.jpg" alt="">
             <ul>
                 <li><a href="./ingresodueño.html">DUEÑO</a></li>
                 <li><a href="./tortas.html">INICIO</a></li>
@@ -126,7 +130,7 @@
                 <p class="title"> torta de frutilla....................</p>
                 <a href="" data-id="11" class="btn-add-cart">Agregar al Carrito</a>
             </div>
-            
+
             <div class="carts">
                 <div>
                     <img src="../image/FlanE.png" alt="">
@@ -135,8 +139,8 @@
                 <p class="title"> Postre de flan....................</p>
                 <a href="" data-id="12" class="btn-add-cart">Agregar al Carrito</a>
             </div>
-     
-            <div class="tituloBebidas" style="width: 1100px;" >
+
+            <div class="tituloBebidas" style="width: 1100px;">
                 <h2>
                     BEBIDAS
                 </h2>
@@ -231,7 +235,7 @@
                 <p class="title"> torta de coco....................</p>
                 <a href="" data-id="23" class="btn-add-cart">Agregar al Carrito</a>
             </div>
-            
+
             <div class="carts">
                 <div>
                     <img src="../image/FlanE.png" alt="">
@@ -243,20 +247,21 @@
         </div>
     </section>
 
-    
+
     <div class="btn_bebidas">
         <input type="button" value="PROCEDER AL PAGO" id="sigbebidas">
     </div>
     <script>
-        function showCart(x){
+        function showCart(x) {
             document.getElementById("products-id").style.display = "block";
         }
-        function closeBtn(){
-             document.getElementById("products-id").style.display = "none";
-        }
 
+        function closeBtn() {
+            document.getElementById("products-id").style.display = "none";
+        }
     </script>
-     <script src="../src/component/fetch.js" ></script>
+
     <script src="../src/container/Tortas.js" type="module"></script>
 </body>
+
 </html>

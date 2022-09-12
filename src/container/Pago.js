@@ -3,8 +3,6 @@
  let interes = parseInt();
 function obtenerPrecioTarjetaLocalStorage() {
    
-  
-
     //Comprobar si hay algo en LS
     if (localStorage.getItem('totalpagartortas') === null) {
         productoLS = [];
@@ -12,12 +10,9 @@ function obtenerPrecioTarjetaLocalStorage() {
     } else {
         productoLS = JSON.parse(localStorage.getItem('totalpagartortas'));
 
-      
        let Monto = document.querySelector("#validationDefaultMonto")
        interes = parseInt(productoLS * 0.25)
-       Monto.value ="$" + (interes + parseInt(productoLS));
-        
-        
+       Monto.value ="$" + (interes + parseInt(productoLS));  
     }
 }
 

@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../image/elamigo.jpg">
+
     <link rel="stylesheet" href="../css/stilos.css">
     <title>El Amigo</title>
 </head>
 
 <body class="bodydueño">
 
-    <header>
-        <div class="header-section container">
-            <img class="logo" src="./images/logoShop.png" alt="">
+    <header class="header">
+        <div class="contenedor">
+            <img class="logo" src="../image/elamigo.jpg" alt="">
+            <ul>
+                <li><a href="./ingresodueño.html">DUEÑO</a></li>
+                <li><a href="./tortas.html">INICIO</a></li>
+            </ul>
         </div>
-        <ul>
-            <li><a href="./ingresodueño.html">DUEÑO</a></li>
-            <li><a href="./tortas.html">INICIO</a></li>
-        </ul>
     </header>
-
     <div class="welcomeowner">
-    <h1 >BIENVENIDO SEÑOR/RA</h1>
-</div>
+        <h1>BIENVENIDO SEÑOR/RA</h1>
+    </div>
 
 
     <div class="h2cajas">
@@ -48,15 +49,15 @@
     </div>
 
     <div class="consultasJason">
-    <div class="consultaJason">
-        <button id="ConsultarJson" class="btnJson"> CONSULTAR BEBIDAS EN EL JASON</button>
+        <div class="consultaJason">
+            <button id="ConsultarJson" class="btnJson"> CONSULTAR BEBIDAS EN EL JASON</button>
+        </div>
+        <div class="consultaJason">
+            <button id="ConsultarJsonTortas" class="btnJson"> CONSULTAR TORTAS EN EL JASON</button>
+        </div>
     </div>
-    <div class="consultaJason">
-        <button id="ConsultarJsonTortas" class="btnJson"> CONSULTAR TORTAS EN EL JASON</button>
-    </div>
-</div>
 
-    
+
     <script src="../src/component/buttons/consultaJason.Js" type="module"></script>
     <script src="../src/container/Dueno.js" type="module"></script>
 </body>

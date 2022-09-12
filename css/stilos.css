@@ -6,12 +6,12 @@
 
 
 /*-------------------------ELECCION----------------------*/
-body{
+body {
     background-color: rgb(206, 206, 206);
 }
 
 
-header{
+header {
     background-color: #8ED1FC;
     padding-top: 18px;
     padding-bottom: 18px;
@@ -21,7 +21,8 @@ header{
     margin-top: -10px;
     z-index: 99;
 }
-.container{
+
+.container {
     max-width: 1200px;
     text-align: center;
     margin: auto;
@@ -32,6 +33,7 @@ header{
     flex-direction: row;
     justify-content: end;
 }
+
 .container ul li {
     padding: 30px;
     list-style-type: none;
@@ -39,27 +41,65 @@ header{
     left: 360px;
     top: 10px;
 }
+
 .container ul li a {
     text-decoration: none;
     color: #000;
 }
 
-.container ul li a:hover{
+.container ul li a:hover {
     color: rgb(10, 196, 196);
     transition: 0.5s;
 }
 
-.header-section{
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor img {
+    margin: 25px;
+}
+
+.contenedor ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 7%;
+    margin-top: 20px;
+}
+
+.contenedor ul li {
+    padding: 30px;
+    list-style-type: none;
+}
+
+.contenedor ul li a {
+    text-decoration: none;
+    padding: 20px;
+    color: #000;
+}
+
+.contenedor ul li a:hover {
+    color: rgb(10, 196, 196);
+    transition: 0.5s;
+}
+
+
+.header-section {
     display: flex;
     justify-content: space-between;
     margin: auto;
     align-items: center;
     position: relative;
 }
-.header-section div{
+
+.header-section div {
     position: relative;
 }
-.header-section p{
+
+.header-section p {
     position: absolute;
     top: -24px;
     right: -8px;
@@ -71,18 +111,20 @@ header{
     font-family: system-ui;
     line-height: 18px;
 }
-.logo{
+
+.logo {
     width: 164px;
     height: 84px;
     cursor: pointer;
 }
 
-.cart{
+.cart {
     width: 39px;
     height: 38px;
 }
-.cart-products{
-    position: absolute!important;
+
+.cart-products {
+    position: absolute !important;
     top: 82px;
     right: -18px;
     background-color: #fff;
@@ -92,10 +134,11 @@ header{
     min-width: 290px;
 }
 
-.cart:hover{
+.cart:hover {
     margin-bottom: 16px;
     transition-duration: .5s;
 }
+
 /*end header*/
 
 
@@ -155,154 +198,75 @@ header{
     align-self: start;
 }
 
-.btn_tortas{
+.btn_tortas {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
-#sigtortas{
+
+#sigtortas {
     padding: 10px;
     margin-bottom: 20px;
 }
-.btn_bebidas{
+
+.btn_bebidas {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px;
 }
-#sigbebidas{
+
+#sigbebidas {
     padding: 20px;
     margin-bottom: 20px;
-    color: #000 ;
+    color: #000;
     font-weight: bolder;
     background-color: rgb(3, 148, 252);
     cursor: pointer;
 }
-#sigbebidas:hover{
+
+#sigbebidas:hover {
     background-color: #fff;
-    color:rgb(10, 196, 196); 
-    border:2px solid rgb(10, 196, 196);
+    color: rgb(10, 196, 196);
+    border: 2px solid rgb(10, 196, 196);
     transition: 0.5s;
 }
 
-.tituloBebidas{
+.tituloBebidas {
     margin-left: 5%;
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
-.tituloBebidas h2{
+.tituloBebidas h2 {
     font-size: 50px;
     margin: 20px;
     border: 1px solid #000;
-    background-color: rgb(3, 148, 252);;
+    background-color: rgb(3, 148, 252);
+    ;
     box-shadow: 10px 5px 5px;
     border-radius: 20px;
 }
 
-.tituloTortas{
+.tituloTortas {
     position: absolute;
     margin-top: 130px;
     margin-left: 20%;
-    
+
 }
-.tituloTortas h1{
+
+.tituloTortas h1 {
     font-size: 50px;
     padding: 0px 400px;
     border: 1px solid #000;
-    background-color: rgb(3, 148, 252);;
-    box-shadow: 10px 5px 5px;  
+    background-color: rgb(3, 148, 252);
+    ;
+    box-shadow: 10px 5px 5px;
     border-radius: 20px;
 }
 
-.carts{
+.carts {
     margin: 10px;
-}
-
-/*-------------------------PAGO----------------------*/
-
-.metopago {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-}
-
-.metopago ul {
-    display: flex;
-}
-
-.metopago ul li {
-    list-style-type: none;
-    padding: 30px;
-    cursor: pointer;
-}
-
-.divForm {
-    width: 100%;
-}
-
-.generar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.generar .generar1 {
-    padding: 10px;
-    background-color: black;
-    color: beige;
-    border: 1px solid rgb(3, 148, 252);
-    cursor: pointer;
-    margin: 10px;
-}
-
-.generar1:hover {
-    opacity: 0.8;
-    transition: 1s;
-}
-
-#formControlado {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    border: 1px solid #000;
-    border-radius: 10px;
-
-}
-
-#formControlado .primero {
-    padding: 20px;
-    width: 100%;
-    margin-left: 23%;
-}
-
-#formControlado .segundo {
-    padding: 20px;
-    width: 100%;
-    margin-left: 23%;
-}
-
-#formControlado .tercero {
-    padding: 20px;
-    width: 100%;
-    margin-left: 23%;
-}
-
-#formControlado input {
-    width: 30%;
-    height: 30px;
-    margin: 0 60px;
-}
-
-.baceptar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 25px;
 }
 
 /*-------------------------------ingreso--------------------------------*/
@@ -413,7 +377,8 @@ header{
     border: 1px solid #fff;
     cursor: pointer;
 }
-#Consulta1:hover{
+
+#Consulta1:hover {
     color: #000;
     background-color: #fff;
     border: 1px solid #000;
@@ -450,7 +415,8 @@ header{
     border: 1px solid #fff;
     cursor: pointer;
 }
-#Consulta2:hover{
+
+#Consulta2:hover {
     color: #000;
     background-color: #fff;
     border: 1px solid #000;
@@ -462,13 +428,14 @@ header{
     background-color: rgb(206, 206, 206);
 }
 
-.consultasJason{
+.consultasJason {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
     padding: 10px;
 }
+
 .consultasJason .consultaJason .btnJson {
     width: 300px;
     margin: 10px;
@@ -478,7 +445,8 @@ header{
     border: 1px solid #fff;
     cursor: pointer;
 }
-.consultasJason .consultaJason .btnJson:hover{
+
+.consultasJason .consultaJason .btnJson:hover {
     color: #000;
     background-color: #fff;
     border: 1px solid #000;
@@ -490,7 +458,7 @@ header{
 
 
 
-.products{
+.products {
     padding-top: 170px;
     display: flex;
     flex-wrap: wrap;
@@ -498,22 +466,25 @@ header{
     padding-top: 220px;
 }
 
-.carts{
+.carts {
     max-width: 250px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
     padding-bottom: 34px;
     margin-bottom: 40px;
 }
-.carts img{
+
+.carts img {
     width: 100%;
 }
-.carts p{
+
+.carts p {
     font-family: system-ui;
     font-weight: 500;
     padding: 0 20px;
     margin-bottom: 24px;
 }
-.carts div p{
+
+.carts div p {
     position: absolute;
     top: 0;
     right: 0px;
@@ -522,10 +493,12 @@ header{
     padding: 2px 7px 4px 21px;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 }
-.carts div{
+
+.carts div {
     position: relative;
 }
-.carts a{
+
+.carts a {
     font-family: system-ui;
     text-decoration: none;
     background: rgb(3, 148, 252);
@@ -536,7 +509,7 @@ header{
     font-weight: 700;
 }
 
-.carts a:hover{
+.carts a:hover {
     background: #fff;
     color: rgb(10, 196, 196);
     border: solid 2px rgb(10, 196, 196);
@@ -544,32 +517,36 @@ header{
 }
 
 /*float cart*/
-.cart-products .item img{
+.cart-products .item img {
     width: 115px;
 }
 
-.cart-products .item{
+.cart-products .item {
     display: flex;
     align-items: center;
     border-bottom: solid 2px rgb(3, 148, 252);
 }
-.cart-products .item .item-content{
+
+.cart-products .item .item-content {
     margin: 0 19px;
     width: 201px;
 }
-.cart-products .item .item-content h5{
+
+.cart-products .item .item-content h5 {
     margin: 0;
     font-size: 15px;
     font-weight: 400;
     font-family: system-ui;
 }
-.cart-products .item .item-content h6{
+
+.cart-products .item .item-content h6 {
     margin: 0;
     font-size: 13px;
     font-weight: 400;
     font-family: system-ui;
 }
-.cart-products .item span{
+
+.cart-products .item span {
     background-color: rgb(3, 148, 252);
     padding: 0px 5px;
     border-radius: 50%;
@@ -577,20 +554,23 @@ header{
     font-family: system-ui;
     cursor: pointer;
 }
-.cart-products h3{
+
+.cart-products h3 {
     margin-bottom: 0;
 }
-.cart-products .item .item-content h5.cart-price{
+
+.cart-products .item .item-content h5.cart-price {
     font-weight: 700;
 }
 
 /*stye to btn close*/
-p.close-btn{
+p.close-btn {
     top: -4px;
     right: 6px;
     cursor: pointer;
     color: #000;
 }
+
 p.author {
     display: flex;
     justify-content: center;
@@ -598,6 +578,7 @@ p.author {
     margin-top: 3%;
     gap: 7px;
 }
+
 p.author a {
     text-decoration: none;
     font-weight: 700;
@@ -607,10 +588,18 @@ p.author a {
 
 /*-------------------PAGO TARJETA---------------------------*/
 
+#tituloMetodo {
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 40%;
 
-.contentForm{
+}
+
+.contentForm {
     border: 1px solid #000;
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
+    position: absolute;
+    margin-top: 270px;
 }
